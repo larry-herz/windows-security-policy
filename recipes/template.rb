@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: windows-security-policy
+# Cookbook:: windows-security-policy
 # Recipe:: template
 #
-# Copyright (c) 2016 The Authors, All Rights Reserved.
+# Copyright:: (c) 2016 The Authors, All Rights Reserved.
 #
 # This recipe builds a security database template that can be imported
 # using the security_policy resource.

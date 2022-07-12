@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: windows-security-policy
+# Cookbook:: windows-security-policy
 # Spec:: default
 #
-# Copyright (c) 2016 The Authors, All Rights Reserved.
+# Copyright:: (c) 2016 The Authors, All Rights Reserved.
 
 require 'spec_helper'
 

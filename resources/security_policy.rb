@@ -1,4 +1,6 @@
 resource_name :security_policy
+provides :security_policy
+unified_mode true
 
 default_action :configure
 
@@ -7,7 +9,7 @@ property :database, String, required: false, default: 'C:\Windows\security\datab
 property :log_location, String, default: 'C:\Windows\security\logs\chef-secedit.log'
 
 action :configure do
-  if node['platform'] == 'windows'
+  if platform?('windows')
     template new_resource.policy_template do
       source 'policy.inf.erb'
       cookbook 'windows-security-policy'
@@ -25,7 +27,7 @@ action :configure do
 end
 
 action :export do
-  if node['platform'] == 'windows'
+  if platform?('windows')
     execute 'Export security database to inf file' do
       command "Secedit /export /db #{new_resource.database} /cfg #{new_resource.policy_template} /log #{new_resource.log_location}"
       live_stream true
@@ -37,7 +39,7 @@ action :export do
 end
 
 action :import do
-  if node['platform'] == 'windows'
+  if platform?('windows')
     template new_resource.policy_template do
       source 'policy.inf.erb'
       action :create
