@@ -1,4 +1,10 @@
 ## Windows Security Policy
+v1.0.0 (2022-07-11)
+--------------------------------
+- Updated to require Chef Client 17 or later.
+- Added unified_mode true to resource file.
+- Removed depricated .delivery information.
+- Updated to latest cookstyle rules.
 
 v0.3.9 (2018-06-01)
 --------------------------------

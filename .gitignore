@@ -21,3 +21,5 @@ Berksfile.lock
 Policyfile.lock.json
 knife.rb
 syntaxcache
+
+*.DS_Store*
